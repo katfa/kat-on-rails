@@ -1,0 +1,14 @@
+<% @entries.each do |entry| %>
+  <div class="entry">
+    <div class="row">
+      <div class="entry-title"><%= entry.title %></div>
+      <div class="timestamp"><%=entry.updated_at %></div>
+    </div>
+
+    <hr>
+
+    <div class="entry-body">
+      <%= entry.body.html_safe %>
+    </div>
+  </div>
+<% end %>

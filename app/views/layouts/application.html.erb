@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kat's learning rails and JS!</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>Kat learns the JS and the Rails</h1>
+  </header>
+
+  <%= yield %>
+
+  <%= javascript_include_tag "application" %>
+
+</body>
+</html>

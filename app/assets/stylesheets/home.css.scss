@@ -1,0 +1,77 @@
+@import "colors";
+
+@font-face {
+  font-family: 'aleolight';
+  src: url('/assets/aleo-light-webfont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width      : 90%;
+  margin     : 0 auto;
+  font-family: 'aleolight';
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+
+}
+
+#main-content {
+  width      : 70%;
+  float      : left;
+  padding-left: 1em;
+  padding-bottom: 5em;
+  z-index: 5;
+  .row {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .entry {
+    box-shadow: 0px 0px 10px #AAAAAA;
+    padding: 1em;
+    background: white;
+    margin-bottom: 2em;
+
+    .entry-title {
+      font-size  : 2em;
+      padding-top: 5px;
+      color      : $darkGrey;
+      float      : left;
+    }
+
+    .timestamp {
+      font-size : 0.8em;
+      color     : $lightBlue;
+      text-align: right;
+      float     : right;
+      margin-top: 1.7em;
+      margin-right: 2em;
+    }
+
+    .entry-body {
+      margin-left: 3em;
+      margin-right: 4em;
+      line-height: 1.4;
+
+      .inline {
+        display: inline;
+      }
+
+    }
+  }
+}
+
+#debug-log {
+  width       : 22%;
+  border      : 1px solid #CCCCCC;
+  float       : right;
+  padding-left: 0.8em;
+}
