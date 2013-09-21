@@ -1,6 +1,18 @@
-<div id="main-content">
-  <%= render :template => 'entries/index', :locals => { :entries => @entries } %>
+<div class="span1" id="side-column">
+    <img src="http://www.gravatar.com/avatar/e56618c28ce46ab8fbcd5b9cdeaf4910.png?s=190" alt="Photo of me" />
+    <p><a class="unstyled-link" href="http://twitter.com/thekataquino">@theKatAquino</a></p>
+    <button name="stop-button">Stop moving</button>
 </div>
-<div id="debug-log">
-  <h3>Debug output</h3>
+<div class="span4" id="main-content">
+  <%= render :partial => 'entries', :locals => { :entries => @entries } %>
 </div>
+
+<script>
+  var params = {
+    'circle': document.getElementById("pink-circle"),
+    'container': document.getElementsByClassName("rectangle")[0],
+    'stopButton': document.getElementsByName("stop-button")[0]
+  };
+  var circle = new FloatingCircle(params);
+
+</script>

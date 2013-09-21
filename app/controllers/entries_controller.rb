@@ -1,7 +1,9 @@
 class EntriesController < ApplicationController
+
   # GET /entries
   # GET /entries.json
   def index
+    @entries = Entry.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @entries }

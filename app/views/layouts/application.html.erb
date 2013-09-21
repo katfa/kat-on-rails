@@ -7,12 +7,17 @@
 </head>
 <body>
   <header>
-    <h1>Kat learns the JS and the Rails</h1>
+    <div class="row">
+      <h1><a class="purple unstyled-link" href="http://twitter.com/thekataquino">Kat</a> learns <span class="pink">JS</span>, <span class="hot-blue">CSS</span>, and <span class="green">Rails</span></h1>
+    </div>
+    
   </header>
+  <hr>
+  <%= javascript_include_tag "application" %>
 
   <%= yield %>
 
-  <%= javascript_include_tag "application" %>
+ 
 
 </body>
 </html>

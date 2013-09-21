@@ -1,4 +1,25 @@
 @import "colors";
+@import "variables";
+
+html {
+  background: $backgroundGrey;
+  background-image: -moz-radial-gradient(center center, circle cover, $lightGrey, $darkGrey);
+  background-image: -webkit-radial-gradient(center center, circle cover, lightGrey, $darkGrey);
+  background-size: cover;
+  z-index: 0;
+}
+
+body {
+  width       : 90%;
+  margin      : 0 auto;
+  font-family : 'aleolight';
+}
+
+hr {
+  margin-bottom: 30px;
+}
+
+/* TEXT SPECIFIC */
 
 @font-face {
   font-family: 'aleolight';
@@ -7,32 +28,81 @@
   font-style: normal;
 }
 
-body {
-  width      : 90%;
-  margin     : 0 auto;
-  font-family: 'aleolight';
+.unstyled-link {
+  text-decoration: none;
+}
+.pink {
+  color: $hotPink;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-
+.green {
+  color: $hotGreen;
 }
+
+.hot-blue {
+  color: $hotBlue;
+}
+
+.purple {
+  color: $purple;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+/* LAYOUT */
+
+.row {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.unit {
+  display: inline-block;
+}
+
+.span1 {
+  width: $unitWidth;
+}
+
+.span2 {
+  width: 2 * $unitWidth;
+}
+
+.span3 {
+  width: 3 * $unitWidth;
+}
+
+.span4 {
+  width: 4 * $unitWidth;
+}
+
+.span5 {
+  width: 5 * $unitWidth;
+}
+
+.span6 {
+  width: 6 * $unitWidth; 
+}
+
+/* COMPONENTS ON PAGE */
 
 #main-content {
-  width      : 70%;
-  float      : left;
-  padding-left: 1em;
-  padding-bottom: 5em;
+  width: 80%;
+  float      : right;
   z-index: 5;
-  .row {
-    display: inline-block;
-    width: 100%;
-  }
 
   .entry {
     box-shadow: 0px 0px 10px #AAAAAA;
@@ -69,9 +139,32 @@ hr {
   }
 }
 
-#debug-log {
-  width       : 22%;
-  border      : 1px solid #CCCCCC;
-  float       : right;
-  padding-left: 0.8em;
+#side-column {
+  float       : left;
+
+  img {
+    box-shadow: 0 0 13px $purple;
+  }
+
+  p {
+    background-color: white;
+    width: 170px;
+    padding: 10px;
+    box-shadow: 0 0 10px $purple;
+  }
+}
+
+.css-box {
+   border: 1px solid $hotBlue;
+}
+
+/* DETAILS */
+.soften {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+
 }
